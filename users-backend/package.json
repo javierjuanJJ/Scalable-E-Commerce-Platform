@@ -1,0 +1,47 @@
+{
+  "name": "users-backend",
+  "version": "1.0.0",
+  "description": "User Service for Scalable E-Commerce Platform",
+  "main": "dist/backend/app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch backend/app.js",
+    "build": "tsc",
+    "start": "node dist/backend/app.js",
+    "test": "node --test backend/**/*.test.js",
+    "test:watch": "node --watch --test backend/**/*.test.js",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "lint": "eslint backend --ext .js,.ts",
+    "format": "prettier --write backend/**/*.js"
+  },
+  "keywords": [
+    "user-service",
+    "ecommerce",
+    "authentication",
+    "registration"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "typescript": "^7.0.2",
+    "tsx": "^4.19.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "better-auth": "^1.7.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pino": "^10.3.1",
+    "pino-elasticsearch": "^9.0.0",
+    "pino-pretty": "^13.0.0",
+    "zod": "^4.5.4"
+  }
+}
